@@ -13,9 +13,30 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-
+  const TURMA ="TurmaA";
   
   let db = firebase.firestore();
+  //add aluno
+  /*db.collection(TURMA).add({
+    nome: "Marcos",
+    sobrenome: "Antônio",
+    notas: {nota1: 9.6, nota2: 7.5}
+  }).then((doc)=>{
+    console.log("Documento inserido com sucesso", doc);
+  }).catch(err => {
+    console.log(err);
+  })*/
+
+  db.collection(TURMA).doc("alunonovo").update({
+    sobrenome: "Ferreira",
+    "notas.nota1":10
+  },
+  ).then(()=>{
+    console.log("Documento inserido com sucesso");
+  }).catch(err => {
+    console.log(err);
+  })
+
   //Ler todos os dados de uma coleção
   /*db.collection("TurmaA").get().then((snapshot)=>{
       snapshot.forEach((doc)=>{
@@ -24,8 +45,16 @@
         console.log(doc.data());
       })
   })*/
-
-  let docRef = db.collection("TurmaA").doc("mOt5Bt4ItfFfXXyofhQW");
+  //ler nome
+  /*let docRef = db.collection("TurmaA").doc("mOt5Bt4ItfFfXXyofhQW");
   docRef.get().then((doc)=>{
       console.log(doc.data().nome);
   })
+  // buscar alunos iguais a José
+  db.collection("TurmaA").where("nome","==","José").get().then (snapshot=>{
+    snapshot.forEach((doc)=>{
+      let aluno = doc.data();
+      console.log(aluno.nome, aluno.sobrenome);  
+    })
+  })*/
+
