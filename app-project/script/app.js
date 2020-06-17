@@ -12,12 +12,21 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-
   const TURMA ="TurmaA";
-  
   let db = firebase.firestore();
+  let auth = firebase.auth();
+
+  /*//add usuarios:
+  let newUserEmail = "pesado@hotmail.com";
+  let newUserPassword = "123abc";
+  auth.createUserWithEmailAndPassword(newUserEmail,newUserPassword).then(user =>{
+    console.log(user);
+  }).catch(error => {console.log(error);})
+
+  
+  
   //add aluno
-  /*db.collection(TURMA).add({
+  db.collection(TURMA).add({
     nome: "Marcos",
     sobrenome: "Antônio",
     notas: {nota1: 9.6, nota2: 7.5}
@@ -25,8 +34,8 @@
     console.log("Documento inserido com sucesso", doc);
   }).catch(err => {
     console.log(err);
-  })*/
-
+  })
+  //add nota
   db.collection(TURMA).doc("alunonovo").update({
     sobrenome: "Ferreira",
     "notas.nota1":10
