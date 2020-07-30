@@ -2,6 +2,9 @@
     0% {left:300px}
     100%{left: 0px;}
 }
+.{
+    background-color: lightgrey;
+}
 .box{
     position: relative;
     height: 110px;
@@ -13,16 +16,22 @@
 }
 .div1{
     animation-timing-function: linear;
+    background-image: url("./imagens/hunza.jpg");
 }
 .div2{
     animation-timing-function: ease ;
+    background-image: url("./imagens/saulinho.jpg");
 }
 .div3{
     animation-timing-function: ease-in;
+    background-image: url("./imagens/game.jpg");
 }
 .div4{
     animation-timing-function: ease-out;
 }
 .div5{
     animation-timing-function:ease-in-out ;
+}
+.container{
+    background-image: url("./imagens/data.jpg");
 }
