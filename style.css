@@ -5,9 +5,10 @@ body{
 .header{
     overflow: hidden;
     margin: auto;
-    width: 80%;
+    width: 98.5%;
+    height: 35px;
     background-color: #5C57A4;
-    padding: 15px;
+    padding: 10px;
     font-size: 18px;
 }
 .menu{
@@ -15,6 +16,10 @@ body{
     margin: 0;
     padding: 0;
     float: right;
+}
+h3{
+    margin: 0;
+    padding: 0;
 }
 li{
     float: left;
