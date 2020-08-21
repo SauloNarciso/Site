@@ -53,3 +53,17 @@ li:hover{
         padding: 10px;  
     }
 }
+main{
+    background-image: url("imagens/code2.jpg");
+    width: 900px;
+    height: 550px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 3px 3px 5px rgba(0, green0, blue0, .5alpha);
+}
+button{
+    display: block;
+    
+   
+
+}
