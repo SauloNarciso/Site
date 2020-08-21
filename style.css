@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+    background-color: #5C57A4;
+    padding: 15px;
+    font-size: 18px;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+li{
+    float: left;
+    color: white;
+    margin-left: 15px;
+    border: white solid 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+li:hover{
+    background:white ;
+    color: #5C57A4;
+}
+.logo{
+    float: left;
+    color: white;
+}
+@media screen and (max-width: 500px) {
+    .logo{
+        float: none;
+        text-align: center;
+    }
+    .menu{
+        float: none;
+        text-align: center;
+        margin-top: 20px;        
+    }
+    li{
+        float: none;
+        margin-bottom: 5px;
+        padding: 10px;  
+    }
+}
